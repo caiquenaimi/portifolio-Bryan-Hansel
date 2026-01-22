@@ -38,7 +38,7 @@ export function Header() {
             href="#"
             className="font-[family-name:var(--font-heading)] text-xl font-bold tracking-tight hover:text-accent transition-colors"
           >
-            [SEU NOME]
+            Bryan Hansel
           </a>
 
           {/* Desktop Navigation */}

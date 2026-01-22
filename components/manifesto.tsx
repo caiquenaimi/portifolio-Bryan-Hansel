@@ -64,7 +64,7 @@ export function Manifesto() {
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-px bg-accent" />
                   <span className="font-[family-name:var(--font-heading)] font-bold text-foreground">
-                    [Seu Nome]
+                    Bryan Hansel
                   </span>
                 </div>
               </div>

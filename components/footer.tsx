@@ -17,7 +17,7 @@ export function Footer() {
         >
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
             <span className="font-[family-name:var(--font-heading)] text-lg font-bold">
-              [SEU NOME]
+              Bryan Hansel
             </span>
             <span className="text-sm text-muted-foreground">
               Marketing + Design + Branding
@@ -25,13 +25,25 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-8 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a
+              target="blank"
+              href="https://www.linkedin.com/in/bryan-hansel-698b11239/"
+              className="hover:text-foreground transition-colors"
+            >
               LinkedIn
             </a>
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a
+              target="blank"
+              href="https://www.instagram.com/_hanselbryan/"
+              className="hover:text-foreground transition-colors"
+            >
               Instagram
             </a>
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a
+              target="blank"
+              href="https://www.behance.net/BryanHansl"
+              className="hover:text-foreground transition-colors"
+            >
               Behance
             </a>
           </div>

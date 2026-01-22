@@ -39,7 +39,7 @@ export function Contact() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Email Card */}
             <motion.a
-              href="mailto:seu@email.com"
+              href="mailto:bryanhnsl@gmail.com"
               whileHover={{ y: -8 }}
               className="group p-8 bg-background border border-border hover:border-accent transition-colors"
             >
@@ -50,12 +50,12 @@ export function Contact() {
               <h3 className="font-[family-name:var(--font-heading)] text-xl font-bold mb-2">
                 Email
               </h3>
-              <p className="text-muted-foreground">seu@email.com</p>
+              <p className="text-muted-foreground">bryanhnsl@gmail.com</p>
             </motion.a>
 
             {/* LinkedIn Card */}
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/bryan-hansel-698b11239/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -8 }}
@@ -68,12 +68,12 @@ export function Contact() {
               <h3 className="font-[family-name:var(--font-heading)] text-xl font-bold mb-2">
                 LinkedIn
               </h3>
-              <p className="text-muted-foreground">/seu-perfil</p>
+              <p className="text-muted-foreground">/bryan-hansel</p>
             </motion.a>
 
             {/* Instagram Card */}
             <motion.a
-              href="https://instagram.com"
+              href="https://www.instagram.com/_hanselbryan/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -8 }}
@@ -86,13 +86,13 @@ export function Contact() {
               <h3 className="font-[family-name:var(--font-heading)] text-xl font-bold mb-2">
                 Instagram
               </h3>
-              <p className="text-muted-foreground">@seu_perfil</p>
+              <p className="text-muted-foreground">@_hanselbryan</p>
             </motion.a>
           </div>
 
           {/* Big CTA */}
           <motion.a
-            href="mailto:seu@email.com"
+            href="mailto:bryanhnsl@gmail.com"
             whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.99 }}
             className="block w-full p-8 md:p-12 bg-accent text-accent-foreground text-center group"
