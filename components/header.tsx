@@ -5,10 +5,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projetos", label: "Projetos" },
-  { href: "#contato", label: "Contato" },
+  { id: "sobre", label: "Sobre" },
+  { id: "skills", label: "Skills" },
+  { id: "projetos", label: "Projetos" },
+  { id: "contato", label: "Contato" },
 ];
 
 export function Header() {
@@ -19,12 +19,24 @@ export function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <>
+      {/* Header */}
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -34,23 +46,24 @@ export function Header() {
         }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <a
-            href="#"
+          {/* Logo */}
+          <button
+            onClick={() => scrollToSection("sobre")}
             className="font-[family-name:var(--font-heading)] text-xl font-bold tracking-tight hover:text-accent transition-colors"
           >
             Bryan Hansel
-          </a>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide"
+              <button
+                key={link.id}
+                onClick={() => scrollToSection(link.id)}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide cursor-pointer"
               >
                 {link.label}
-              </a>
+              </button>
             ))}
           </nav>
 
@@ -92,17 +105,19 @@ export function Header() {
 
               <nav className="flex flex-col gap-6">
                 {navLinks.map((link, index) => (
-                  <motion.a
-                    key={link.href}
-                    href={link.href}
+                  <motion.button
+                    key={link.id}
+                    onClick={() => {
+                      scrollToSection(link.id);
+                      setIsMobileMenuOpen(false);
+                    }}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="font-[family-name:var(--font-heading)] text-4xl font-bold hover:text-accent transition-colors"
+                    className="font-[family-name:var(--font-heading)] text-4xl font-bold hover:text-accent transition-colors text-left"
                   >
                     {link.label}
-                  </motion.a>
+                  </motion.button>
                 ))}
               </nav>
 
