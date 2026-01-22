@@ -82,6 +82,10 @@ export function Projects() {
 }
 
 function ProjectCard({ project }: { project: (typeof projects)[0] }) {
+  const baseImage = project.image.replace(".jpg", "");
+  const image2 = `${baseImage}2.jpg`;
+  const image3 = `${baseImage}3.jpg`;
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 40 }}
@@ -105,22 +109,27 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
 
           {/* Duas imagens menores */}
           <div className="grid grid-cols-2 gap-6">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-accent/20 flex items-center justify-center">
-              <span className="text-xs tracking-widest uppercase text-muted-foreground">
-                Foto
-              </span>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image
+                src={image2}
+                alt={`${project.name} - imagem 2`}
+                fill
+                className="object-cover"
+              />
             </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-accent/20 flex items-center justify-center">
-              <span className="text-xs tracking-widest uppercase text-muted-foreground">
-                Foto
-              </span>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image
+                src={image3}
+                alt={`${project.name} - imagem 3`}
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
 
         {/* COLUNA DIREITA — TEXTO */}
         <div className="space-y-10">
-          {/* Cabeçalho */}
           <div className="space-y-4">
             <span className="text-sm tracking-widest uppercase text-muted-foreground">
               O projeto
@@ -135,7 +144,6 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
             </p>
           </div>
 
-          {/* SOBRE */}
           <div className="space-y-3">
             <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">
               Sobre o Projeto
@@ -145,7 +153,6 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
             </p>
           </div>
 
-          {/* DESAFIO */}
           <div className="space-y-3">
             <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">
               O Desafio
@@ -155,7 +162,6 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
             </p>
           </div>
 
-          {/* COMO TRABALHEI */}
           <div className="space-y-3">
             <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">
               Como Trabalhei
@@ -169,3 +175,4 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
     </motion.article>
   );
 }
+
