@@ -78,7 +78,7 @@ export function Header() {
             <div className="flex flex-col h-full p-6">
               <div className="flex items-center justify-between mb-12">
                 <span className="font-[family-name:var(--font-heading)] text-xl font-bold">
-                  [SEU NOME]
+                  Bryan Hansel
                 </span>
                 <button
                   type="button"
@@ -111,10 +111,10 @@ export function Header() {
                   Vamos conversar?
                 </p>
                 <a
-                  href="mailto:seu@email.com"
+                  href="mailto:bryanhnsl@gmail.com"
                   className="text-accent font-medium"
                 >
-                  seu@email.com
+                  bryanhnsl@gmail.com
                 </a>
               </div>
             </div>
