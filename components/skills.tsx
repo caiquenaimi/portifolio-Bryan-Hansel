@@ -83,6 +83,7 @@ export function Skills() {
               <span>Skills & Ferramentas</span>
               <span className="w-8 h-px bg-accent" />
             </div>
+
             <h2 className="font-[family-name:var(--font-heading)] text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight">
               O que eu
               <br />
@@ -95,6 +96,7 @@ export function Skills() {
             <h3 className="text-sm tracking-widest uppercase text-muted-foreground">
               Estratégia & Branding
             </h3>
+
             <div className="flex flex-wrap gap-4">
               {strategicSkills.map((skill, index) => (
                 <motion.div
@@ -104,7 +106,11 @@ export function Skills() {
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05, backgroundColor: "var(--accent)" }}
-                  className="px-6 py-4 border border-border bg-background text-foreground font-[family-name:var(--font-heading)] text-xl md:text-2xl font-bold transition-colors hover:text-accent-foreground"
+                  className="px-5 py-3 sm:px-6 sm:py-4 
+                  border border-border bg-background text-foreground 
+                  font-[family-name:var(--font-heading)] 
+                  text-lg sm:text-xl md:text-2xl font-bold 
+                  transition-colors hover:text-accent-foreground"
                 >
                   {skill}
                 </motion.div>
@@ -118,7 +124,8 @@ export function Skills() {
               Design & Comunicação Visual
             </h3>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {/* GRID CORRIGIDO */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {creativeSkills.map((skill, index) => (
                 <motion.div
                   key={skill.title}
@@ -127,7 +134,10 @@ export function Skills() {
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -8 }}
-                  className="group relative aspect-square border border-border p-6 flex flex-col justify-end overflow-hidden
+                  className="group relative aspect-square 
+                  border border-border 
+                  p-4 sm:p-5 lg:p-6 
+                  flex flex-col justify-end overflow-hidden
                   bg-gradient-to-br from-background to-secondary"
                 >
                   {/* textura sutil */}
@@ -143,11 +153,15 @@ export function Skills() {
                   {/* overlay accent */}
                   <div className="absolute inset-0 bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                  <span className="relative z-10 font-[family-name:var(--font-heading)] text-lg md:text-xl font-bold group-hover:text-accent-foreground transition-colors">
+                  <span className="relative z-10 font-[family-name:var(--font-heading)] text-base sm:text-lg md:text-xl font-bold group-hover:text-accent-foreground transition-colors">
                     {skill.title}
                   </span>
 
-                  <p className="relative z-10 text-xs text-muted-foreground mt-2 leading-snug group-hover:text-accent-foreground/80 transition-colors">
+                  <p
+                    className="relative z-10 text-xs text-muted-foreground mt-2 leading-snug
+                    line-clamp-3 sm:line-clamp-none
+                    group-hover:text-accent-foreground/80 transition-colors"
+                  >
                     {skill.desc}
                   </p>
 
@@ -164,6 +178,7 @@ export function Skills() {
             <h3 className="text-sm tracking-widest uppercase text-muted-foreground">
               Ferramentas & Plataformas
             </h3>
+
             <div className="relative overflow-hidden py-4">
               <motion.div
                 animate={{ x: [0, -1000] }}
@@ -177,9 +192,9 @@ export function Skills() {
                 {[...softwares, ...softwares].map((software, index) => (
                   <div
                     key={`${software.name}-${index}`}
-                    className="flex items-center gap-4 px-8 py-4 bg-background border border-border"
+                    className="flex items-center gap-4 px-6 py-4 bg-background border border-border"
                   >
-                    <span className="font-[family-name:var(--font-heading)] text-2xl md:text-3xl font-bold">
+                    <span className="font-[family-name:var(--font-heading)] text-xl md:text-3xl font-bold">
                       {software.name}
                     </span>
                     <span className="text-xs text-muted-foreground uppercase tracking-wider">
