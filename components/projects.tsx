@@ -73,7 +73,7 @@ export function Projects() {
 
       {/* Projects List */}
       <div className="space-y-32">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>
