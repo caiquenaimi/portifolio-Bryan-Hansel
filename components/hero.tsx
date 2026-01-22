@@ -27,7 +27,7 @@ export function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            Profissional sênior de estratégia, design e branding. Atuo de ponta
+            Profissional pleno de estratégia, design e branding. Atuo de ponta
             a ponta — da estratégia à execução — transformando negócios em
             marcas memoráveis.
           </p>

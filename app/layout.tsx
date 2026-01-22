@@ -8,8 +8,8 @@ const _spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: '--font-head
 const _inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Estratégia + Design + Branding',
-  description: 'Profissional sênior de Marketing, Design e Branding. Construo sistemas de marca de ponta a ponta.',
+  title: 'Portfolio | Bryan Hansel',
+  description: 'Profissional pleno de Marketing, Design e Branding. Construo sistemas de marca de ponta a ponta.',
   generator: 'v0.app',
   icons: {
     icon: [
