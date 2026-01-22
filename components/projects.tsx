@@ -7,39 +7,42 @@ import { ArrowUpRight } from "lucide-react";
 const projects = [
   {
     id: 1,
-    name: "Nome do Projeto 01",
-    segment: "B2B • Facilities • Operação Intensiva",
-    image: "/project-1.jpg",
+    name: "Delta Facilities",
+    segment: "Facilities • Operação intensiva • Comunicação B2B",
+    image: "/delta-facilities.jpg",
     about:
-      "[Placeholder: Descreva brevemente o projeto, o cliente e o contexto. O que era a empresa e qual era o momento dela quando vocês começaram a trabalhar juntos.]",
+      "A Delta Facilities atua no segmento de facilities, com operações complexas, múltiplos serviços e alta dependência de processos bem definidos. O projeto teve como foco traduzir essa estrutura operacional em uma comunicação clara, confiável e alinhada à visão de gestão da empresa.",
     challenge:
-      "[Placeholder: Qual era o principal desafio? Pode ser reposicionamento, falta de identidade, baixa conversão, necessidade de escalar, etc.]",
+      "Organizar informações dispersas, alinhar o discurso institucional e construir uma presença digital que refletisse a maturidade da operação, sem perder clareza para o público final.",
     approach:
-      "[Placeholder: Como você trabalhou? Qual foi sua abordagem estratégica? Destaque o processo e as entregas principais.]",
+      "Atuei de forma próxima à liderança e às equipes internas, conduzindo conversas, levantando dados operacionais e transformando tudo isso em storytelling, arquitetura de conteúdo e design, garantindo coerência entre estratégia, comunicação e execução.",
+    link: "https://behance.net/SEU-LINK",
   },
   {
     id: 2,
-    name: "Nome do Projeto 02",
-    segment: "Tecnologia • SaaS • Startup",
-    image: "/project-2.jpg",
+    name: "NeutroCarbon (ex-GDFLOG)",
+    segment: "Logística • Sustentabilidade • Rebranding estratégico",
+    image: "/neutrocarbon.jpg",
     about:
-      "[Placeholder: Descreva brevemente o projeto, o cliente e o contexto. O que era a empresa e qual era o momento dela quando vocês começaram a trabalhar juntos.]",
+      "A GDFLOG era uma empresa de transporte tradicional que decidiu reposicionar sua atuação para um discurso sólido de sustentabilidade e neutralidade de carbono, dando origem à NeutroCarbon.",
     challenge:
-      "[Placeholder: Qual era o principal desafio? Pode ser reposicionamento, falta de identidade, baixa conversão, necessidade de escalar, etc.]",
+      "Realizar um rebranding completo — nome, identidade, discurso e site — sem cair em soluções superficiais ou oportunistas, garantindo coerência entre propósito, operação e comunicação.",
     approach:
-      "[Placeholder: Como você trabalhou? Qual foi sua abordagem estratégica? Destaque o processo e as entregas principais.]",
+      "Conduzi o entendimento profundo do negócio, defini posicionamento, desenvolvi a identidade visual e o site institucional, sempre conectando estratégia e execução.",
+    link: "https://behance.net/SEU-LINK",
   },
   {
     id: 3,
-    name: "Nome do Projeto 03",
-    segment: "Varejo • E-commerce • Expansão",
-    image: "/project-3.jpg",
+    name: "MedRescue",
+    segment: "Serviços críticos • Saúde e emergência • Branding sob pressão",
+    image: "/medrescue.jpg",
     about:
-      "[Placeholder: Descreva brevemente o projeto, o cliente e o contexto. O que era a empresa e qual era o momento dela quando vocês começaram a trabalhar juntos.]",
+      "A MedRescue atua em um setor altamente sensível, onde confiança, credibilidade e clareza são indispensáveis. A empresa precisava estruturar toda a sua marca em um curto espaço de tempo.",
     challenge:
-      "[Placeholder: Qual era o principal desafio? Pode ser reposicionamento, falta de identidade, baixa conversão, necessidade de escalar, etc.]",
+      "Criar identidade, posicionamento e materiais institucionais completos em cerca de um mês, mantendo consistência e qualidade mesmo sob forte pressão de prazo.",
     approach:
-      "[Placeholder: Como você trabalhou? Qual foi sua abordagem estratégica? Destaque o processo e as entregas principais.]",
+      "Organizei rapidamente prioridades, defini decisões críticas e conduzi o processo de forma objetiva, equilibrando estratégia e execução para garantir uma base sólida desde o início.",
+    link: "https://behance.net/SEU-LINK",
   },
 ];
 

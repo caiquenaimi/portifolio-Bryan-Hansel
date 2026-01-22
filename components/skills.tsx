@@ -2,37 +2,64 @@
 
 import { motion } from "framer-motion";
 
+/* ===== Estratégia & Branding ===== */
 const strategicSkills = [
-  "Brand Strategy",
-  "Storytelling",
-  "Market Research",
-  "Positioning",
-  "Growth Marketing",
-  "Content Strategy",
-  "UX Strategy",
-  "Customer Journey",
+  "Branding & Rebranding",
+  "Posicionamento de Marca",
+  "Arquitetura de Marca",
+  "Storytelling Institucional",
+  "Direção Criativa aplicada ao negócio",
+  "Comunicação B2B",
+  "Tradução de linguagem técnica",
+  "Clareza e coerência estratégica",
 ];
 
+/* ===== Design & Comunicação Visual ===== */
 const creativeSkills = [
-  "Visual Identity",
-  "Art Direction",
-  "UI Design",
-  "Editorial Design",
-  "Motion Graphics",
-  "Typography",
-  "Photography Direction",
-  "Presentation Design",
+  {
+    title: "Identidade Visual Completa",
+    desc: "Construção de sistemas visuais consistentes, funcionais e escaláveis.",
+  },
+  {
+    title: "Design Institucional",
+    desc: "Comunicação visual alinhada à estratégia e posicionamento da marca.",
+  },
+  {
+    title: "Design para Mídias Sociais",
+    desc: "Conteúdo visual estratégico para presença digital contínua.",
+  },
+  {
+    title: "Materiais Impressos",
+    desc: "Peças gráficas pensadas para impacto, clareza e acabamento.",
+  },
+  {
+    title: "Materiais Digitais",
+    desc: "Apresentações, PDFs e assets digitais com foco em comunicação.",
+  },
+  {
+    title: "Direção de Imagem",
+    desc: "Orientação estética e narrativa para fotos e campanhas.",
+  },
+  {
+    title: "Fotografia Institucional",
+    desc: "Imagem corporativa profissional alinhada à identidade da marca.",
+  },
+  {
+    title: "Design Editorial",
+    desc: "Organização de conteúdo com hierarquia, ritmo e leitura fluida.",
+  },
 ];
 
+/* ===== Ferramentas & Plataformas ===== */
 const softwares = [
-  { name: "Figma", category: "Design" },
-  { name: "Adobe Creative Suite", category: "Design" },
-  { name: "After Effects", category: "Motion" },
-  { name: "Notion", category: "Productivity" },
-  { name: "Miro", category: "Collaboration" },
-  { name: "Webflow", category: "Development" },
-  { name: "HubSpot", category: "Marketing" },
-  { name: "Analytics", category: "Data" },
+  { name: "WordPress", category: "Web" },
+  { name: "Elementor Pro", category: "Web" },
+  { name: "Adobe Photoshop", category: "Design" },
+  { name: "Adobe Illustrator", category: "Design" },
+  { name: "Adobe InDesign", category: "Design" },
+  { name: "Canva", category: "Uso estratégico" },
+  { name: "Gestão com equipes", category: "Colaboração" },
+  { name: "Gestão com agências", category: "Colaboração" },
 ];
 
 export function Skills() {
@@ -49,7 +76,7 @@ export function Skills() {
           viewport={{ once: true }}
           className="space-y-20"
         >
-          {/* Section Header */}
+          {/* Header */}
           <div className="text-center space-y-6">
             <div className="flex items-center justify-center gap-3 text-muted-foreground text-sm tracking-widest uppercase">
               <span className="w-8 h-px bg-accent" />
@@ -63,10 +90,10 @@ export function Skills() {
             </h2>
           </div>
 
-          {/* Strategic Skills - Large Typography */}
+          {/* Estratégia */}
           <div className="space-y-8">
             <h3 className="text-sm tracking-widest uppercase text-muted-foreground">
-              Estratégia
+              Estratégia & Branding
             </h3>
             <div className="flex flex-wrap gap-4">
               {strategicSkills.map((skill, index) => (
@@ -77,7 +104,7 @@ export function Skills() {
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05, backgroundColor: "var(--accent)" }}
-                  className="px-6 py-4 border border-border bg-background text-foreground font-[family-name:var(--font-heading)] text-xl md:text-2xl font-bold cursor-default transition-colors hover:text-accent-foreground"
+                  className="px-6 py-4 border border-border bg-background text-foreground font-[family-name:var(--font-heading)] text-xl md:text-2xl font-bold transition-colors hover:text-accent-foreground"
                 >
                   {skill}
                 </motion.div>
@@ -85,27 +112,46 @@ export function Skills() {
             </div>
           </div>
 
-          {/* Creative Skills - Grid Cards */}
+          {/* Design & Comunicação Visual */}
           <div className="space-y-8">
             <h3 className="text-sm tracking-widest uppercase text-muted-foreground">
-              Criação
+              Design & Comunicação Visual
             </h3>
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {creativeSkills.map((skill, index) => (
                 <motion.div
-                  key={skill}
+                  key={skill.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -8 }}
-                  className="group relative aspect-square bg-background border border-border p-6 flex flex-col justify-end overflow-hidden"
+                  className="group relative aspect-square border border-border p-6 flex flex-col justify-end overflow-hidden
+                  bg-gradient-to-br from-background to-secondary"
                 >
+                  {/* textura sutil */}
+                  <div
+                    className="absolute inset-0 opacity-[0.04]"
+                    style={{
+                      backgroundImage:
+                        "radial-gradient(#fff 1px, transparent 1px)",
+                      backgroundSize: "4px 4px",
+                    }}
+                  />
+
+                  {/* overlay accent */}
                   <div className="absolute inset-0 bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
                   <span className="relative z-10 font-[family-name:var(--font-heading)] text-lg md:text-xl font-bold group-hover:text-accent-foreground transition-colors">
-                    {skill}
+                    {skill.title}
                   </span>
-                  <span className="relative z-10 text-sm text-muted-foreground group-hover:text-accent-foreground/70 transition-colors">
+
+                  <p className="relative z-10 text-xs text-muted-foreground mt-2 leading-snug group-hover:text-accent-foreground/80 transition-colors">
+                    {skill.desc}
+                  </p>
+
+                  <span className="relative z-10 text-xs text-muted-foreground mt-4 group-hover:text-accent-foreground/60 transition-colors">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                 </motion.div>
@@ -113,16 +159,16 @@ export function Skills() {
             </div>
           </div>
 
-          {/* Softwares - Horizontal Scroll */}
+          {/* Ferramentas */}
           <div className="space-y-8">
             <h3 className="text-sm tracking-widest uppercase text-muted-foreground">
-              Ferramentas
+              Ferramentas & Plataformas
             </h3>
             <div className="relative overflow-hidden py-4">
               <motion.div
                 animate={{ x: [0, -1000] }}
                 transition={{
-                  repeat: Number.POSITIVE_INFINITY,
+                  repeat: Infinity,
                   duration: 20,
                   ease: "linear",
                 }}
