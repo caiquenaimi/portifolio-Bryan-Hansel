@@ -19,7 +19,7 @@ export function About() {
               src="/profile.jpg"
               alt="Foto do profissional"
               fill
-              className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              className="object-cover grayscale hover:grayscale-0 transition-all duration-700 rounded-2xl"
             />
             <div className="absolute inset-0 bg-accent/10 mix-blend-multiply" />
           </div>
