@@ -12,21 +12,8 @@ export const metadata: Metadata = {
   description: 'Profissional pleno de Marketing, Design e Branding. Construo sistemas de marca de ponta a ponta.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/icon.png', 
+    apple: '/apple-icon.png', 
   },
 }
 
@@ -36,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`font-sans antialiased`}>
+    <html lang="pt-br" className={`${_spaceGrotesk.variable}`}>
+      <body className={`${_inter.className} antialiased`}>
         {children}
         <Analytics />
       </body>

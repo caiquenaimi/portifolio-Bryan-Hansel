@@ -59,7 +59,7 @@ export function About() {
             <div className="grid grid-cols-3 gap-6 pt-4">
               <div className="space-y-1">
                 <span className="font-[family-name:var(--font-heading)] text-3xl md:text-4xl font-bold text-accent">
-                  10+
+                  7+
                 </span>
                 <p className="text-sm text-muted-foreground">
                   Anos de experiência
@@ -67,7 +67,7 @@ export function About() {
               </div>
               <div className="space-y-1">
                 <span className="font-[family-name:var(--font-heading)] text-3xl md:text-4xl font-bold text-accent">
-                  50+
+                  100+
                 </span>
                 <p className="text-sm text-muted-foreground">
                   Projetos entregues
@@ -75,7 +75,7 @@ export function About() {
               </div>
               <div className="space-y-1">
                 <span className="font-[family-name:var(--font-heading)] text-3xl md:text-4xl font-bold text-accent">
-                  30+
+                  8+
                 </span>
                 <p className="text-sm text-muted-foreground">Marcas criadas</p>
               </div>
