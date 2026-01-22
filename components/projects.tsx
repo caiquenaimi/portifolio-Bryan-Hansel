@@ -74,66 +74,68 @@ export function Projects() {
       {/* Projects List */}
       <div className="space-y-32">
         {projects.map((project, index) => (
-          <ProjectCard key={project.id} project={project} index={index} />
+          <ProjectCard key={project.id} project={project} />
         ))}
       </div>
     </section>
   );
 }
 
-function ProjectCard({
-  project,
-  index,
-}: {
-  project: (typeof projects)[0];
-  index: number;
-}) {
-  const isEven = index % 2 === 0;
-
+function ProjectCard({ project }: { project: (typeof projects)[0] }) {
   return (
     <motion.article
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      viewport={{ once: true, margin: "-100px" }}
-      className="space-y-12"
+      viewport={{ once: true }}
+      className="px-6 md:px-12 lg:px-24"
     >
-      {/* Project Image - Full Width */}
-      <div className="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden group cursor-pointer">
-        <Image
-          src={project.image || "/placeholder.svg"}
-          alt={project.name}
-          fill
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-background/40 group-hover:bg-background/20 transition-colors duration-500" />
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-start">
+        {/* COLUNA ESQUERDA — IMAGENS */}
+        <div className="space-y-6">
+          {/* Imagem grande */}
+          <div className="relative aspect-[16/10] rounded-2xl overflow-hidden">
+            <Image
+              src={project.image}
+              alt={project.name}
+              fill
+              className="object-cover"
+            />
+          </div>
 
-        {/* Overlay Content */}
-        <div className="absolute inset-0 flex items-end p-6 md:p-12 lg:p-16">
-          <div className="flex items-end justify-between w-full">
-            <div className="space-y-2">
-              <span className="text-sm text-foreground/70 tracking-widest uppercase">
-                {project.segment}
+          {/* Duas imagens menores */}
+          <div className="grid grid-cols-2 gap-6">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-accent/20 flex items-center justify-center">
+              <span className="text-xs tracking-widest uppercase text-muted-foreground">
+                Foto
               </span>
-              <h3 className="font-[family-name:var(--font-heading)] text-3xl md:text-5xl lg:text-6xl font-bold text-foreground">
-                {project.name}
-              </h3>
             </div>
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              className="w-16 h-16 bg-accent flex items-center justify-center"
-            >
-              <ArrowUpRight className="w-8 h-8 text-accent-foreground" />
-            </motion.div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-accent/20 flex items-center justify-center">
+              <span className="text-xs tracking-widest uppercase text-muted-foreground">
+                Foto
+              </span>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Project Details */}
-      <div className="px-6 md:px-12 lg:px-24">
-        <div
-          className={`max-w-7xl mx-auto grid md:grid-cols-3 gap-8 lg:gap-12 ${isEven ? "" : "md:flex-row-reverse"}`}
-        >
+        {/* COLUNA DIREITA — TEXTO */}
+        <div className="space-y-10">
+          {/* Cabeçalho */}
+          <div className="space-y-4">
+            <span className="text-sm tracking-widest uppercase text-muted-foreground">
+              O projeto
+            </span>
+
+            <h3 className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl font-bold text-accent">
+              {project.name}
+            </h3>
+
+            <p className="text-sm tracking-widest uppercase text-foreground/70">
+              {project.segment}
+            </p>
+          </div>
+
+          {/* SOBRE */}
           <div className="space-y-3">
             <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">
               Sobre o Projeto
@@ -142,6 +144,8 @@ function ProjectCard({
               {project.about}
             </p>
           </div>
+
+          {/* DESAFIO */}
           <div className="space-y-3">
             <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">
               O Desafio
@@ -150,6 +154,8 @@ function ProjectCard({
               {project.challenge}
             </p>
           </div>
+
+          {/* COMO TRABALHEI */}
           <div className="space-y-3">
             <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">
               Como Trabalhei
