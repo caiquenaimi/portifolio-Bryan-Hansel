@@ -1,9 +1,27 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Mail, Linkedin, Instagram } from "lucide-react";
+import { ArrowUpRight, Mail, Linkedin, Instagram, Check } from "lucide-react";
+import { useState } from "react";
 
 export function Contact() {
+  const [copied, setCopied] = useState(false);
+  const email = "bryanhnsl@gmail.com";
+
+  const handleContact = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    // Tenta abrir o cliente de e-mail
+    window.location.href = `mailto:${email}`;
+
+    // Copia para o clipboard como fallback
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+
+    // Reseta o status de "copiado" após 3 segundos
+    setTimeout(() => setCopied(false), 3000);
+  };
+
   return (
     <section
       id="contato"
@@ -29,29 +47,34 @@ export function Contact() {
               <span className="text-accent">algo juntos?</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-xl">
-              [Placeholder: Escreva uma frase convidativa para contato. Seja
-              direto sobre como você prefere ser abordado e o que espera de uma
-              conversa inicial.]
+              Estou sempre aberto a novos desafios e parcerias estratégicas. 
+              Sinta-se à vontade para me chamar em qualquer uma das redes abaixo.
             </p>
           </div>
 
           {/* Contact Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Email Card */}
-            <motion.a
-              href="mailto:bryanhnsl@gmail.com"
+            {/* Email Card - Agora usando onClick */}
+            <motion.button
+              onClick={handleContact}
               whileHover={{ y: -8 }}
-              className="group p-8 bg-background border border-border hover:border-accent transition-colors"
+              className="group p-8 bg-background border border-border hover:border-accent transition-colors text-left w-full relative"
             >
               <div className="flex items-start justify-between mb-6">
                 <Mail className="w-8 h-8 text-accent" />
-                <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-accent transition-colors" />
+                {copied ? (
+                  <Check className="w-6 h-6 text-green-500" />
+                ) : (
+                  <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-accent transition-colors" />
+                )}
               </div>
               <h3 className="font-[family-name:var(--font-heading)] text-xl font-bold mb-2">
                 Email
               </h3>
-              <p className="text-muted-foreground">bryanhnsl@gmail.com</p>
-            </motion.a>
+              <p className="text-muted-foreground">
+                {copied ? "Copiado para a área de transferência!" : email}
+              </p>
+            </motion.button>
 
             {/* LinkedIn Card */}
             <motion.a
@@ -91,17 +114,17 @@ export function Contact() {
           </div>
 
           {/* Big CTA */}
-          <motion.a
-            href="mailto:bryanhnsl@gmail.com"
+          <motion.button
+            onClick={handleContact}
             whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.99 }}
             className="block w-full p-8 md:p-12 bg-accent text-accent-foreground text-center group"
           >
             <span className="font-[family-name:var(--font-heading)] text-2xl md:text-4xl lg:text-5xl font-bold inline-flex items-center gap-4">
-              Começar uma conversa
+              {copied ? "Email copiado!" : "Começar uma conversa"}
               <ArrowUpRight className="w-8 h-8 md:w-12 md:h-12 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform" />
             </span>
-          </motion.a>
+          </motion.button>
         </motion.div>
       </div>
     </section>
