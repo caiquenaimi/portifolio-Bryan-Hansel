@@ -10,15 +10,16 @@ export function Contact() {
 
   const handleContact = (e: React.MouseEvent) => {
     e.preventDefault();
-    
-    // Tenta abrir o cliente de e-mail
-    window.location.href = `mailto:${email}`;
 
-    // Copia para o clipboard como fallback
+    const subject = encodeURIComponent(
+      "Contato via Portfólio - [Seu Nome/Empresa]",
+    );
+
+    window.location.href = `mailto:${email}?subject=${subject}`;
+
     navigator.clipboard.writeText(email);
     setCopied(true);
 
-    // Reseta o status de "copiado" após 3 segundos
     setTimeout(() => setCopied(false), 3000);
   };
 
@@ -47,8 +48,9 @@ export function Contact() {
               <span className="text-accent">algo juntos?</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-xl">
-              Estou sempre aberto a novos desafios e parcerias estratégicas. 
-              Sinta-se à vontade para me chamar em qualquer uma das redes abaixo.
+              Estou sempre aberto a novos desafios e parcerias estratégicas.
+              Sinta-se à vontade para me chamar em qualquer uma das redes
+              abaixo.
             </p>
           </div>
 
