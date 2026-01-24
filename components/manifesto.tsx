@@ -44,20 +44,24 @@ export function Manifesto() {
 
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                [Placeholder: Escreva seu manifesto aqui. O que você acredita
-                sobre branding? Por que marcas importam? Qual é a sua filosofia
-                de trabalho?]
+                Acredito em trabalho que resolve, sustenta e respeita o contexto
               </p>
               <p>
-                [Placeholder: Continue desenvolvendo seu pensamento. Fale sobre
-                a importância da estratégia antes do design, sobre entender o
-                negócio antes de criar, sobre o impacto real que uma marca bem
-                construída pode ter.]
+                Em um mercado cheio de ruído, opiniões rápidas e soluções
+                instantâneas, acredito que o verdadeiro valor está em quem
+                consegue parar, observar e escolher bem. Nem toda ideia precisa
+                ser executada. Nem toda tendência precisa ser seguida.
               </p>
               <p>
-                [Placeholder: Conclua com uma frase forte que resuma sua visão.
-                Algo memorável que conecte com o leitor e deixe uma impressão
-                duradoura.]
+                Gosto de projetos onde existe responsabilidade. Onde decisões
+                têm consequência. Onde comunicação não é enfeite, mas
+                ferramenta.
+              </p>
+              <p>
+                Acredito que marcas, produtos e estratégias precisam respeitar
+                quem está do outro lado — clientes, equipes, parceiros. Não para
+                agradar, mas para fazer sentido. Clareza não simplifica o
+                problema. Ela o torna possível de ser resolvido.
               </p>
 
               <div className="pt-4">
