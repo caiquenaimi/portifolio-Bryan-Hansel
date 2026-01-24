@@ -19,17 +19,21 @@ export function Hero() {
           </div>
 
           <h1 className="font-[family-name:var(--font-heading)] text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight text-balance">
-            <span className="text-foreground">Construo marcas</span>
+            <span className="text-foreground">Conecto visão</span>
             <br />
-            <span className="text-foreground">que geram</span>
+            <span className="text-foreground">e execução</span>
             <br />
-            <span className="text-accent">resultados.</span>
+            <span className="text-foreground">para dar clareza a</span>
+            <br />
+            <span className="text-accent">projetos.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            Profissional pleno de estratégia, design e branding. Atuo de ponta
-            a ponta — da estratégia à execução — transformando negócios em
-            marcas memoráveis.
+            Trabalho ao lado de equipes, gestores e lideranças quando o cenário
+            ainda está em construção, estratégias que precisam ganhar forma,
+            comunicação que precisa fazer sentido e decisões que exigem mais
+            contexto do que pressa. Meu papel é organizar informações, conectar
+            pontos e ajudar boas ideias a se tornarem executáveis.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
