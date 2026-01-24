@@ -21,7 +21,7 @@ const projects = [
   },
   {
     id: 2,
-    name: "NeutroCarbon (ex-GDFLOG)",
+    name: "NeutroCarbon",
     segment: "Logística • Sustentabilidade • Rebranding estratégico",
     image: "/neutrocarbon.jpg",
     about:
