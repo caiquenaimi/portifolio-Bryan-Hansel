@@ -51,9 +51,38 @@ export function About() {
                 ao time, provavelmente vamos trabalhar bem juntos.
               </p>
               <p>
-              Trabalho para somar, organizar e dar clareza, ajudando boas ideias a se transformarem em algo que funcione de verdade no dia a dia.
+                Trabalho para somar, organizar e dar clareza, ajudando boas
+                ideias a se transformarem em algo que funcione de verdade no dia
+                a dia.
               </p>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              viewport={{ once: true }}
+              className="pt-2"
+            >
+              <a
+                href="/cv-bryan.pdf"
+                download
+                className="group inline-flex items-center gap-4 
+    font-[family-name:var(--font-heading)] 
+    text-lg md:text-xl font-bold
+    text-foreground
+    border-b border-border pb-2
+    hover:border-accent transition-colors"
+              >
+                <span className="group-hover:text-accent transition-colors">
+                  Baixar CV
+                </span>
+
+                <span className="text-muted-foreground group-hover:text-accent transition-colors">
+                  ↓
+                </span>
+              </a>
+            </motion.div>
 
             <div className="grid grid-cols-3 gap-6 pt-4">
               <div className="space-y-1">
