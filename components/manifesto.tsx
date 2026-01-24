@@ -5,16 +5,18 @@ import Image from "next/image";
 
 export function Manifesto() {
   return (
-    <section className="relative min-h-screen flex items-center">
-      {/* Background Image */}
-      <div className="absolute inset-0">
+    <section className="relative min-h-screen flex items-center bg-black overflow-hidden">
+      {/* Background Image com Filtro Escuro */}
+      <div className="absolute inset-0 z-0">
         <Image
           src="/manifesto-bg.jpg"
           alt="Background"
           fill
-          className="object-cover"
+          className="object-cover opacity-30 grayscale" // Imagem sutil e em P&B
+          priority
         />
-        <div className="absolute inset-0 bg-background/80" />
+        {/* Overlay de Gradiente para escurecer ainda mais */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/80 to-black" />
       </div>
 
       {/* Content */}
@@ -33,7 +35,7 @@ export function Manifesto() {
                 <span>Manifesto</span>
               </div>
 
-              <h2 className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
+              <h2 className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-white">
                 Marcas não são
                 <br />
                 apenas visuais.
@@ -42,9 +44,9 @@ export function Manifesto() {
               </h2>
             </div>
 
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <div className="space-y-6 text-lg text-zinc-400 leading-relaxed">
               <p>
-                Acredito em trabalho que resolve, sustenta e respeita o contexto
+                Acredito em trabalho que resolve, sustenta e respeita o contexto.
               </p>
               <p>
                 Em um mercado cheio de ruído, opiniões rápidas e soluções
@@ -67,7 +69,7 @@ export function Manifesto() {
               <div className="pt-4">
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-px bg-accent" />
-                  <span className="font-[family-name:var(--font-heading)] font-bold text-foreground">
+                  <span className="font-[family-name:var(--font-heading)] font-bold text-white">
                     Bryan Hansel
                   </span>
                 </div>
