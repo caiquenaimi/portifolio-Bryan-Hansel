@@ -4,6 +4,22 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 
 export function Hero() {
+  // Função para lidar com o scroll suave de forma programática
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      // Calcula a posição e rola suavemente
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      
+      // Atualiza a URL sem "pular" a página (opcional)
+      window.history.pushState(null, "", `#${id}`);
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 py-20">
       <div className="max-w-7xl mx-auto w-full">
@@ -39,17 +55,19 @@ export function Hero() {
           <div className="flex flex-wrap gap-4 pt-4">
             <motion.a
               href="#projetos"
+              onClick={(e) => handleScroll(e, "projetos")}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium text-sm tracking-wide hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium text-sm tracking-wide hover:bg-primary/90 transition-colors cursor-pointer"
             >
               Ver Projetos
             </motion.a>
             <motion.a
               href="#contato"
+              onClick={(e) => handleScroll(e, "contato")}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground font-medium text-sm tracking-wide hover:bg-secondary transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground font-medium text-sm tracking-wide hover:bg-secondary transition-colors cursor-pointer"
             >
               Entrar em Contato
             </motion.a>
