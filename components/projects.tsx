@@ -133,7 +133,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
 
         {/* COLUNA DIREITA — TEXTO */}
         <div className="flex flex-col h-full">
-          {/* Header do Projeto */}
+          {/* Header fixo no topo */}
           <div className="space-y-4 mb-10">
             <span className="text-sm tracking-widest uppercase text-muted-foreground">
               O projeto
@@ -146,8 +146,9 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
             </p>
           </div>
 
-          {/* Grid de Informações: Organiza em 2 colunas para ocupar o espaço */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* O GRID COM ALTURA TOTAL: 
+      'grid-rows-2' ou 'flex-1 grid' garante que ele ocupe o espaço até o fim das imagens */}
+          <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10">
             <div className="space-y-3">
               <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">
                 Sobre o Projeto
@@ -175,9 +176,10 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
               </p>
             </div>
 
-            {/* O Resultado agora preenche a lacuna ao lado do "Como Trabalhei" */}
-            <div className="space-y-3 p-5 bg-accent/5 rounded-xl border border-accent/10">
-              <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">
+            {/* O RESULTADO DENTRO DO GRID E ALINHADO NA BASE:
+        'self-end' faz ele colar no fundo da célula, alinhando com a imagem. */}
+            <div className="self-end p-6 bg-accent/5 rounded-2xl border border-accent/10">
+              <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent mb-2">
                 O Resultado
               </h4>
               <p className="text-foreground leading-relaxed text-sm font-medium">
