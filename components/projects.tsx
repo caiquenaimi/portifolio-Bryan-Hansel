@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
@@ -101,7 +102,6 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
         
         {/* COLUNA ESQUERDA — IMAGENS */}
-        {/* Aumentei o gap de 6 para 10 para empurrar a base para baixo */}
         <div className="flex flex-col gap-10"> 
           <div className="relative aspect-[16/10] rounded-2xl overflow-hidden shadow-2xl">
             <Image
@@ -146,7 +146,6 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
             </p>
           </div>
 
-          {/* Mantendo o Resultado no grid, mas alinhando na base */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12 items-end">
             <div className="space-y-3 self-start">
               <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">Sobre o Projeto</h4>
@@ -163,10 +162,22 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
               <p className="text-muted-foreground leading-relaxed text-sm">{project.approach}</p>
             </div>
 
-            {/* Resultado dentro do grid, com self-end para colar na base */}
-            <div className="self-end p-6 bg-accent/5 rounded-2xl border border-accent/10">
-              <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent mb-2">O Resultado</h4>
-              <p className="text-foreground leading-relaxed text-sm font-medium">{project.result}</p>
+            {/* Resultado + Botão Behance */}
+            <div className="self-end space-y-6">
+              <div className="p-6 bg-accent/5 rounded-2xl border border-accent/10">
+                <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent mb-2">O Resultado</h4>
+                <p className="text-foreground leading-relaxed text-sm font-medium">{project.result}</p>
+              </div>
+              
+              <a 
+                href={project.link} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-[0.2em] group hover:text-foreground transition-colors"
+              >
+                Ver projeto no Behance
+                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              </a>
             </div>
           </div>
         </div>
