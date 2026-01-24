@@ -4,18 +4,15 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 
 export function Hero() {
-  // Função para lidar com o scroll suave de forma programática
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
-      // Calcula a posição e rola suavemente
       element.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
       
-      // Atualiza a URL sem "pular" a página (opcional)
       window.history.pushState(null, "", `#${id}`);
     }
   };
