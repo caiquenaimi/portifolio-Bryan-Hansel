@@ -61,7 +61,7 @@ export function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-6 mb-16"
+            className="space-y-6 mb-20"
           >
             <div className="flex items-center gap-3 text-muted-foreground text-sm tracking-widest uppercase">
               <span className="w-8 h-px bg-accent" />
@@ -76,8 +76,7 @@ export function Projects() {
         </div>
       </div>
 
-      {/* Projects List */}
-      <div className="space-y-32">
+      <div className="space-y-40">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
@@ -99,10 +98,12 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
       viewport={{ once: true }}
       className="px-6 md:px-12 lg:px-24"
     >
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-start">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
+        
         {/* COLUNA ESQUERDA — IMAGENS */}
-        <div className="space-y-6">
-          <div className="relative aspect-[16/10] rounded-2xl overflow-hidden">
+        {/* Aumentei o gap de 6 para 10 para empurrar a base para baixo */}
+        <div className="flex flex-col gap-10"> 
+          <div className="relative aspect-[16/10] rounded-2xl overflow-hidden shadow-2xl">
             <Image
               src={project.image}
               alt={project.name}
@@ -112,18 +113,18 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
           </div>
 
           <div className="grid grid-cols-2 gap-6">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src={image2}
-                alt={`${project.name} - imagem 2`}
+                alt={`${project.name} - 2`}
                 fill
                 className="object-cover"
               />
             </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src={image3}
-                alt={`${project.name} - imagem 3`}
+                alt={`${project.name} - 3`}
                 fill
                 className="object-cover"
               />
@@ -132,62 +133,44 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
         </div>
 
         {/* COLUNA DIREITA — TEXTO */}
-        <div className="flex flex-col h-full">
-          {/* Header fixo no topo */}
-          <div className="space-y-4 mb-10">
-            <span className="text-sm tracking-widest uppercase text-muted-foreground">
+        <div className="flex flex-col h-full"> 
+          <div className="mb-10">
+            <span className="text-xs tracking-[0.2em] uppercase text-muted-foreground block mb-4">
               O projeto
             </span>
-            <h3 className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl font-bold text-accent">
+            <h3 className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl font-bold text-accent mb-4">
               {project.name}
             </h3>
-            <p className="text-sm tracking-widest uppercase text-foreground/70">
+            <p className="text-sm tracking-wide uppercase text-foreground/50">
               {project.segment}
             </p>
           </div>
 
-          {/* O GRID COM ALTURA TOTAL: 
-      'grid-rows-2' ou 'flex-1 grid' garante que ele ocupe o espaço até o fim das imagens */}
-          <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10">
-            <div className="space-y-3">
-              <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">
-                Sobre o Projeto
-              </h4>
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                {project.about}
-              </p>
+          {/* Mantendo o Resultado no grid, mas alinhando na base */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12 items-end">
+            <div className="space-y-3 self-start">
+              <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">Sobre o Projeto</h4>
+              <p className="text-muted-foreground leading-relaxed text-sm">{project.about}</p>
             </div>
 
-            <div className="space-y-3">
-              <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">
-                O Desafio
-              </h4>
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                {project.challenge}
-              </p>
+            <div className="space-y-3 self-start">
+              <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">O Desafio</h4>
+              <p className="text-muted-foreground leading-relaxed text-sm">{project.challenge}</p>
             </div>
 
-            <div className="space-y-3">
-              <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">
-                Como Trabalhei
-              </h4>
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                {project.approach}
-              </p>
+            <div className="space-y-3 self-start">
+              <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">Como Trabalhei</h4>
+              <p className="text-muted-foreground leading-relaxed text-sm">{project.approach}</p>
             </div>
 
-            {/* O RESULTADO DENTRO DO GRID E ALINHADO NA BASE:
-        'self-end' faz ele colar no fundo da célula, alinhando com a imagem. */}
+            {/* Resultado dentro do grid, com self-end para colar na base */}
             <div className="self-end p-6 bg-accent/5 rounded-2xl border border-accent/10">
-              <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent mb-2">
-                O Resultado
-              </h4>
-              <p className="text-foreground leading-relaxed text-sm font-medium">
-                {project.result}
-              </p>
+              <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent mb-2">O Resultado</h4>
+              <p className="text-foreground leading-relaxed text-sm font-medium">{project.result}</p>
             </div>
           </div>
         </div>
+
       </div>
     </motion.article>
   );
