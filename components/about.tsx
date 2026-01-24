@@ -40,19 +40,18 @@ export function About() {
 
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
-                [Placeholder: Escreva aqui uma breve introdução pessoal.
-                Destaque sua trajetória, valores e o que te move como
-                profissional. Seja direto e humano.]
+                Não acredito em soluções isoladas ou em respostas prontas.
+                Acredito em processos bem pensados, conversas honestas e
+                decisões sustentáveis, construídas em conjunto. É assim que
+                projetos deixam de ser apenas bem executados e passam a
+                funcionar de verdade no dia a dia das empresas.
               </p>
               <p>
-                [Placeholder: Fale sobre sua visão de negócio e como você
-                entrega valor para as empresas. Mencione sua experiência com B2B
-                e os resultados que já alcançou.]
+                Se você valoriza colaboração, clareza e profissionais que somam
+                ao time, provavelmente vamos trabalhar bem juntos.
               </p>
               <p>
-                [Placeholder: Conclua com o que te diferencia — sua abordagem
-                estratégica, sua capacidade de ver o todo, ou sua experiência
-                multidisciplinar.]
+              Trabalho para somar, organizar e dar clareza, ajudando boas ideias a se transformarem em algo que funcione de verdade no dia a dia.
               </p>
             </div>
 
