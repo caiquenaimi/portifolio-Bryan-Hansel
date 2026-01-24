@@ -11,11 +11,13 @@ const projects = [
     segment: "Facilities • Operação intensiva • Comunicação B2B",
     image: "/delta-facilities.jpg",
     about:
-      "A Delta Facilities atua no segmento de facilities, com operações complexas, múltiplos serviços e alta dependência de processos bem definidos. O projeto teve como foco traduzir essa estrutura operacional em uma comunicação clara, confiável e alinhada à visão de gestão da empresa.",
+      "Empresa de facilities com operação complexa e múltiplos serviços. O trabalho teve foco em organizar a comunicação para refletir a maturidade da gestão e da operação.",
     challenge:
-      "Organizar informações dispersas, alinhar o discurso institucional e construir uma presença digital que refletisse a maturidade da operação, sem perder clareza para o público final.",
+      "Transformar informações dispersas em um discurso claro, confiável e funcional sem simplificar demais uma operação que é, por natureza, complexa.",
     approach:
-      "Atuei de forma próxima à liderança e às equipes internas, conduzindo conversas, levantando dados operacionais e transformando tudo isso em storytelling, arquitetura de conteúdo e design, garantindo coerência entre estratégia, comunicação e execução.",
+      "Atuação próxima à liderança, com autonomia para decidir caminhos. Conduzi conversas, organizei dados operacionais e traduzi a visão dos sócios em direção estratégica, conteúdo e design, sempre mantendo coerência entre discurso e execução.",
+    result:
+      "Mais clareza na comunicação, decisões mais seguras ao longo do processo e uma base de marketing preparada para sustentar crescimento.",
     link: "https://behance.net/SEU-LINK",
   },
   {
@@ -29,6 +31,8 @@ const projects = [
       "Realizar um rebranding completo — nome, identidade, discurso e site — sem cair em soluções superficiais ou oportunistas, garantindo coerência entre propósito, operação e comunicação.",
     approach:
       "Conduzi o entendimento profundo do negócio, defini posicionamento, desenvolvi a identidade visual e o site institucional, sempre conectando estratégia e execução.",
+    result:
+      "Reposicionamento de marca bem-sucedido, transformando a percepção de uma transportadora comum em uma consultoria logística sustentável de alto valor.",
     link: "https://behance.net/SEU-LINK",
   },
   {
@@ -42,6 +46,8 @@ const projects = [
       "Criar identidade, posicionamento e materiais institucionais completos em cerca de um mês, mantendo consistência e qualidade mesmo sob forte pressão de prazo.",
     approach:
       "Organizei rapidamente prioridades, defini decisões críticas e conduzi o processo de forma objetiva, equilibrando estratégia e execução para garantir uma base sólida desde o início.",
+    result:
+      "Lançamento de marca impecável em tempo recorde, com uma estrutura visual e narrativa que transmite autoridade imediata no setor de saúde.",
     link: "https://behance.net/SEU-LINK",
   },
 ];
@@ -97,7 +103,6 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-start">
         {/* COLUNA ESQUERDA — IMAGENS */}
         <div className="space-y-6">
-          {/* Imagem grande */}
           <div className="relative aspect-[16/10] rounded-2xl overflow-hidden">
             <Image
               src={project.image}
@@ -107,7 +112,6 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
             />
           </div>
 
-          {/* Duas imagens menores */}
           <div className="grid grid-cols-2 gap-6">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
               <Image
@@ -129,50 +133,61 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
         </div>
 
         {/* COLUNA DIREITA — TEXTO */}
-        <div className="space-y-10">
-          <div className="space-y-4">
+        <div className="flex flex-col h-full">
+          {/* Header do Projeto */}
+          <div className="space-y-4 mb-10">
             <span className="text-sm tracking-widest uppercase text-muted-foreground">
               O projeto
             </span>
-
             <h3 className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl font-bold text-accent">
               {project.name}
             </h3>
-
             <p className="text-sm tracking-widest uppercase text-foreground/70">
               {project.segment}
             </p>
           </div>
 
-          <div className="space-y-3">
-            <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">
-              Sobre o Projeto
-            </h4>
-            <p className="text-muted-foreground leading-relaxed">
-              {project.about}
-            </p>
-          </div>
+          {/* Grid de Informações: Organiza em 2 colunas para ocupar o espaço */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-3">
+              <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">
+                Sobre o Projeto
+              </h4>
+              <p className="text-muted-foreground leading-relaxed text-sm">
+                {project.about}
+              </p>
+            </div>
 
-          <div className="space-y-3">
-            <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">
-              O Desafio
-            </h4>
-            <p className="text-muted-foreground leading-relaxed">
-              {project.challenge}
-            </p>
-          </div>
+            <div className="space-y-3">
+              <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">
+                O Desafio
+              </h4>
+              <p className="text-muted-foreground leading-relaxed text-sm">
+                {project.challenge}
+              </p>
+            </div>
 
-          <div className="space-y-3">
-            <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">
-              Como Trabalhei
-            </h4>
-            <p className="text-muted-foreground leading-relaxed">
-              {project.approach}
-            </p>
+            <div className="space-y-3">
+              <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">
+                Como Trabalhei
+              </h4>
+              <p className="text-muted-foreground leading-relaxed text-sm">
+                {project.approach}
+              </p>
+            </div>
+
+            {/* O Resultado agora preenche a lacuna ao lado do "Como Trabalhei" */}
+            <div className="space-y-3 p-5 bg-accent/5 rounded-xl border border-accent/10">
+              <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-accent">
+                O Resultado
+              </h4>
+              <p className="text-foreground leading-relaxed text-sm font-medium">
+                {project.result}
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </motion.article>
   );
 }
-
