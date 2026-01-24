@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
@@ -26,13 +25,13 @@ const projects = [
     segment: "Logística • Sustentabilidade • Rebranding estratégico",
     image: "/neutrocarbon.jpg",
     about:
-      "A GDFLOG era uma empresa de transporte tradicional que decidiu reposicionar sua atuação para um discurso sólido de sustentabilidade e neutralidade de carbono, dando origem à NeutroCarbon.",
+      "Empresa do setor logístico que passou por uma mudança estratégica para atuar com foco em sustentabilidade e neutralidade de carbono. O projeto surgiu a partir de uma oportunidade clara de mercado, mas com tempo extremamente curto para execução.",
     challenge:
-      "Realizar um rebranding completo — nome, identidade, discurso e site — sem cair em soluções superficiais ou oportunistas, garantindo coerência entre propósito, operação e comunicação.",
+      "Conduzir uma virada completa de posicionamento — marca, discurso e presença digital — em ritmo acelerado, garantindo coerência estratégica e credibilidade suficiente para sustentar conversas com investidores.",
     approach:
-      "Conduzi o entendimento profundo do negócio, defini posicionamento, desenvolvi a identidade visual e o site institucional, sempre conectando estratégia e execução.",
+      "Atuei liderando o projeto de ponta a ponta, estruturando rapidamente o novo posicionamento e traduzindo essa virada em identidade visual e site. Decisões focadas em clareza, timing e viabilidade, equilibrando velocidade com consistência estratégica.",
     result:
-      "Reposicionamento de marca bem-sucedido, transformando a percepção de uma transportadora comum em uma consultoria logística sustentável de alto valor.",
+      "A nova marca permitiu um posicionamento competitivo, fortalecendo a narrativa do negócio e contribuindo diretamente para a validação da proposta junto a investidores em um curto espaço de tempo.",
     link: "https://behance.net/SEU-LINK",
   },
   {
@@ -41,13 +40,13 @@ const projects = [
     segment: "Serviços críticos • Saúde e emergência • Branding sob pressão",
     image: "/medrescue.jpg",
     about:
-      "A MedRescue atua em um setor altamente sensível, onde confiança, credibilidade e clareza são indispensáveis. A empresa precisava estruturar toda a sua marca em um curto espaço de tempo.",
+      "A MedRescue atua em um setor altamente sensível, onde confiança, clareza e rapidez são essenciais. O projeto envolveu a construção da marca e de sua comunicação em um contexto com múltiplos serviços e públicos distintos.",
     challenge:
-      "Criar identidade, posicionamento e materiais institucionais completos em cerca de um mês, mantendo consistência e qualidade mesmo sob forte pressão de prazo.",
+      "Conectar diferentes ecossistemas — saúde, resgate, engenharia ocupacional e soluções tecnológicas — em uma única marca, sem gerar ruído. Era fundamental criar uma lógica clara que organizasse a comunicação sem diluir o posicionamento.",
     approach:
-      "Organizei rapidamente prioridades, defini decisões críticas e conduzi o processo de forma objetiva, equilibrando estratégia e execução para garantir uma base sólida desde o início.",
+      "Estruturei a marca a partir de uma arquitetura visual e conceitual, definindo papéis claros para cada ecossistema e diretrizes de uso. O foco foi um sistema simples de entender, fácil de aplicar e consistente em todos os pontos de contato.",
     result:
-      "Lançamento de marca impecável em tempo recorde, com uma estrutura visual e narrativa que transmite autoridade imediata no setor de saúde.",
+      "Uma marca organizada e coerente, capaz de comunicar serviços complexos de forma clara, sem perder identidade ou confiança — tanto em ambientes institucionais quanto operacionais.",
     link: "https://behance.net/SEU-LINK",
   },
 ];
