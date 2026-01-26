@@ -84,8 +84,7 @@ export function Freelas() {
                   alt={`Freela ${index}`}
                   fill
                   sizes="(max-width: 768px) 250px, 350px"
-                  // Voltamos para object-cover para unificar o tamanho visual das artes
-                  className="object-cover transition-all duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-80 group-hover:opacity-100"
+                  className="object-cover transition-all duration-700 group-hover:scale-110 opacity-100"
                 />
               </div>
             ))}
