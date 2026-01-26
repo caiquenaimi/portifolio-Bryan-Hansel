@@ -48,7 +48,7 @@ export function Freelas() {
           >
             <div className="flex items-center justify-center md:justify-start gap-3 text-accent text-sm tracking-[0.3em] uppercase font-bold">
               <span className="w-8 h-px bg-accent" />
-              <span>Job Opportunity</span>
+              <span>Trabalhos Pontuais</span>
             </div>
 
             <h2 className="font-[family-name:var(--font-heading)] text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white">
