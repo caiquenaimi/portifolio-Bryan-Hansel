@@ -6,6 +6,7 @@ import { Projects } from "@/components/projects";
 import { Manifesto } from "@/components/manifesto";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { Freelas } from "@/components/freelas";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <Manifesto />
+      <Freelas />
       <Contact />
       <Footer />
     </main>

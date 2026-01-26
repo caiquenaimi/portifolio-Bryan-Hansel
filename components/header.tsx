@@ -8,6 +8,8 @@ const navLinks = [
   { id: "sobre", label: "Sobre" },
   { id: "skills", label: "Skills" },
   { id: "projetos", label: "Projetos" },
+  { id: "manifesto", label: "Manifesto" },
+  { id: "freelas", label: "Freelas" },
   { id: "contato", label: "Contato" },
 ];
 

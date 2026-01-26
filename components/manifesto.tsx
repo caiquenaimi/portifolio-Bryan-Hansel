@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function Manifesto() {
   return (
-    <section className="relative min-h-screen flex items-center bg-black overflow-hidden">
+    <section id="manifesto" className="relative min-h-screen flex items-center bg-black overflow-hidden">
       {/* Background Image com Filtro Escuro */}
       <div className="absolute inset-0 z-0">
         <Image
