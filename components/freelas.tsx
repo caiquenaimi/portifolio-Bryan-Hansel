@@ -1,8 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue, animate } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { useEffect } from "react";
 
 const freelaImages = [
   "/freela1.jpg",
@@ -10,10 +11,16 @@ const freelaImages = [
   "/freela3.jpg",
   "/freela4.jpg",
   "/freela5.png",
+  "/freela6.jpg",
+  "/freela7.jpg",
+  "/freela8.png",
+  "/freela9.jpg",
+  "/freela10.jpg",
+  "/freela11.jpg",
 ];
 
-// Duplicamos a lista para o carrossel não ter fim (infinito real)
-const duplicatedImages = [...freelaImages, ...freelaImages, ...freelaImages];
+// Apenas 2 cópias
+const duplicatedImages = [...freelaImages, ...freelaImages];
 
 export function Freelas() {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -27,6 +34,22 @@ export function Freelas() {
       window.history.pushState(null, "", `#${id}`);
     }
   };
+
+  const x = useMotionValue(0);
+
+  useEffect(() => {
+    const controls = animate(
+      x,
+      [0, -freelaImages.length * 350],
+      {
+        ease: "linear",
+        duration: 40,
+        repeat: Infinity,
+      }
+    );
+
+    return controls.stop;
+  }, [x]);
 
   return (
     <section
@@ -63,15 +86,9 @@ export function Freelas() {
           </motion.div>
         </div>
 
-        {/* Carrossel Infinito sem Gap */}
         <div className="relative flex overflow-hidden py-4">
           <motion.div
-            animate={{ x: [0, "-50%"] }} // Move metade da largura total (que é duplicada)
-            transition={{
-              repeat: Infinity,
-              duration: 40,
-              ease: "linear",
-            }}
+            style={{ x }}
             className="flex gap-4 md:gap-8 flex-nowrap w-max"
           >
             {duplicatedImages.map((src, index) => (
