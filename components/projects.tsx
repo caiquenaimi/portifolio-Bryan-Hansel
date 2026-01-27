@@ -18,7 +18,7 @@ const projects = [
       "Atuação próxima à liderança, com autonomia para decidir caminhos. Conduzi conversas, organizei dados operacionais e traduzi a visão dos sócios em direção estratégica, conteúdo e design, sempre mantendo coerência entre discurso e execução.",
     result:
       "Mais clareza na comunicação, decisões mais seguras ao longo do processo e uma base de marketing preparada para sustentar crescimento.",
-    link: "https://behance.net/SEU-LINK",
+    link: "https://www.behance.net/gallery/243000871/Rebranding-site-Delta-Facilities",
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const projects = [
       "Atuei liderando o projeto de ponta a ponta, estruturando rapidamente o novo posicionamento e traduzindo essa virada em identidade visual e site. Decisões focadas em clareza, timing e viabilidade, equilibrando velocidade com consistência estratégica.",
     result:
       "A nova marca permitiu um posicionamento competitivo, fortalecendo a narrativa do negócio e contribuindo diretamente para a validação da proposta junto a investidores em um curto espaço de tempo.",
-    link: "https://behance.net/SEU-LINK",
+    link: "https://www.behance.net/gallery/242993079/NeutroCarbon-Rebranding",
   },
   {
     id: 3,
@@ -48,7 +48,7 @@ const projects = [
       "Estruturei a marca a partir de uma arquitetura visual e conceitual, definindo papéis claros para cada ecossistema e diretrizes de uso. O foco foi um sistema simples de entender, fácil de aplicar e consistente em todos os pontos de contato.",
     result:
       "Uma marca organizada e coerente, capaz de comunicar serviços complexos de forma clara, sem perder identidade ou confiança — tanto em ambientes institucionais quanto operacionais.",
-    link: "https://behance.net/SEU-LINK",
+    link: "https://youtu.be/dQw4w9WgXcQ?si=h08j2QH4ZoiLoOY2",
   },
 ];
 
