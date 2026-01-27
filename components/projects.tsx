@@ -48,7 +48,7 @@ const projects = [
       "Estruturei a marca a partir de uma arquitetura visual e conceitual, definindo papéis claros para cada ecossistema e diretrizes de uso. O foco foi um sistema simples de entender, fácil de aplicar e consistente em todos os pontos de contato.",
     result:
       "Uma marca organizada e coerente, capaz de comunicar serviços complexos de forma clara, sem perder identidade ou confiança — tanto em ambientes institucionais quanto operacionais.",
-    link: "https://youtu.be/dQw4w9WgXcQ?si=h08j2QH4ZoiLoOY2",
+    link: "https://behance.net/SEU-LINK",
   },
 ];
 
